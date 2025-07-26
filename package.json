@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "tanstack-query-optimistic-update",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "description": "",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.mjs",
+  "types": "./dist/cjs/index.d.ts",
+  "files": [],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.mts",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "prepare": "lefthook install -f",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
+    "prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
+    "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "test": "",
+    "build": "pnpm run clean && pnpm run build",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "TODO"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.11.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.11.0",
+    "lefthook": "^1.12.2",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.8.0",
+    "vite": "^7.0.6",
+    "vitest": "^3.2.4"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^4.0.0 || ^5.0.0"
+  }
+}
