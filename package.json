@@ -31,7 +31,7 @@
     "lint:fix": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
     "prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
     "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx}'",
-    "test": "",
+    "test": "vitest --coverage  --typecheck",
     "build": "pnpm run clean && pnpm run build",
     "clean": "rm -rf dist"
   },
@@ -43,11 +43,16 @@
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitest/coverage-v8": "3.2.4",
     "eslint": "^9.11.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "happy-dom": "^18.0.1",
     "lefthook": "^1.12.2",
     "prettier": "^3.6.2",
     "typescript": "^5.8.3",
@@ -56,6 +61,7 @@
     "vitest": "^3.2.4"
   },
   "peerDependencies": {
-    "@tanstack/react-query": "^4.0.0 || ^5.0.0"
+    "@tanstack/react-query": "^4 || ^5",
+    "react": "^18 || ^19"
   }
 }
