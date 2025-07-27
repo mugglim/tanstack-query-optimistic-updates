@@ -1,12 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "tanstack-query-optimistic-update",
+  "name": "tanstack-query-optimistic-updates",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/mugglim/tanstack-query-optimistic-updates"
   },
-  "description": "",
+  "description": "Simplifies optimistic updates in React Query",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.mjs",
   "types": "./dist/cjs/index.d.ts",

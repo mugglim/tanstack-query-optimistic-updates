@@ -20,7 +20,7 @@ export function useOptimisticMutation<TData = unknown, TError = DefaultError, TV
   const {
     queryKey: optimisticUpdateQueryKey,
     invalidateQueryOnSuccess = false,
-    optimisticUpdateFn
+    optimisticUpdatesFn
   } = optimisticUpdateOptions;
 
   return useMutation<TData, TError, TVariables, OptimisticUpdateContext>(
@@ -35,7 +35,7 @@ export function useOptimisticMutation<TData = unknown, TError = DefaultError, TV
           return;
         }
 
-        const optimisticQueryData = optimisticUpdateFn({ prevQueryData, variables });
+        const optimisticQueryData = optimisticUpdatesFn({ prevQueryData, variables });
 
         client.setQueryData(optimisticUpdateQueryKey, optimisticQueryData);
         onMutate?.(variables);

@@ -36,7 +36,7 @@ describe("useOptimisticMutation", () => {
         mutationFn: () => Promise.resolve(),
         optimisticUpdateOptions: {
           queryKey: MOCK_QUERY_DATA.todo.queryKey,
-          optimisticUpdateFn: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
+          optimisticUpdatesFn: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
             return [...prevQueryData, variables];
           }
         }
@@ -68,7 +68,7 @@ describe("useOptimisticMutation", () => {
         mutationFn: () => Promise.reject(),
         optimisticUpdateOptions: {
           queryKey: MOCK_QUERY_DATA.todo.queryKey,
-          optimisticUpdateFn: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
+          optimisticUpdatesFn: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
             return [...prevQueryData, variables];
           }
         }
@@ -107,7 +107,7 @@ describe("useOptimisticMutation", () => {
         mutationFn: () => Promise.resolve(),
         optimisticUpdateOptions: {
           queryKey: MOCK_QUERY_DATA.todo.queryKey,
-          optimisticUpdateFn: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
+          optimisticUpdatesFn: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
             return [...prevQueryData, variables];
           },
           invalidateQueryOnSuccess: true
@@ -147,7 +147,7 @@ describe("useOptimisticMutation", () => {
         mutationFn: () => Promise.resolve(),
         optimisticUpdateOptions: {
           queryKey: MOCK_QUERY_DATA.todo.queryKey,
-          optimisticUpdateFn: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
+          optimisticUpdatesFn: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
             return [...prevQueryData, variables];
           },
           invalidateQueryOnSuccess: () => {
@@ -187,7 +187,7 @@ describe("useOptimisticMutation", () => {
         mutationFn: () => Promise.resolve(),
         optimisticUpdateOptions: {
           queryKey: MOCK_QUERY_DATA.todo.queryKey,
-          optimisticUpdateFn: updateFnMock
+          optimisticUpdatesFn: updateFnMock
         }
       });
 

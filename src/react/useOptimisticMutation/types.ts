@@ -8,7 +8,7 @@ export type OptimisticUpdateOptions<TQueryData = unknown, TVariables = void> = {
   /**
    * A function returns the resulting optimistic state.
    */
-  optimisticUpdateFn: (param: { prevQueryData: TQueryData; variables: TVariables }) => TQueryData;
+  optimisticUpdatesFn: (param: { prevQueryData: TQueryData; variables: TVariables }) => TQueryData;
   /**
    * If set to `true`, the query will fetch if the data is stale.
    *
