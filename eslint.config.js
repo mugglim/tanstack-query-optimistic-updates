@@ -23,9 +23,16 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       /**
        * Disallow unused variables
-       * @see https://typescript-eslint.io/rules/no-unused-vars/
+       *
+       * @see https://typescript-eslint.io/rules/no-unused-vars
        */
       "@typescript-eslint/no-unused-vars": "warn",
+      /**
+       * Disallow the use of console
+       *
+       * @see https://eslint.org/docs/latest/rules/no-console
+       */
+      "no-console": "warn",
       "react-refresh/only-export-components": "off",
       "import/order": [
         "error",
