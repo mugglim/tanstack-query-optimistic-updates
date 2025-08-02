@@ -33,15 +33,15 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm run build
+        run: pnpm build
 
       - name: Create and publish versions
         uses: changesets/action@v1
         with:
           title: "🚀 change package version"
           commit: "📦 bump changed package version"
-          publish: pnpm run release
-          version: pnpm run changeset-version
+          publish: pnpm release
+          version: pnpm changeset-version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

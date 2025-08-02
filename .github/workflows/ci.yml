@@ -54,13 +54,13 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Lint
-        run: pnpm run lint
+        run: pnpm lint
 
       - name: Prettier
-        run: pnpm run prettier
+        run: pnpm prettier
 
       - name: Test
-        run: pnpm run test
+        run: pnpm test
   build:
     needs: setup
     runs-on: ubuntu-latest
@@ -86,4 +86,4 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm run build
+        run: pnpm build
