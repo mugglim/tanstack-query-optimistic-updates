@@ -43,7 +43,6 @@
     "clean": "rm -rf dist",
     "build": "pnpm run clean && vite build --config vite.config.mts && pnpm run build:dts",
     "build:dts": "tsup --config tsup.config.mts",
-    "docs:build": "pnpm --filter docs run docs:build",
     "release": "changeset publish",
     "changeset-version": "changeset version"
   },
