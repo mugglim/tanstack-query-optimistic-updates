@@ -34,7 +34,7 @@ function Page() {
     mutationFn: () => Promise.resolve(),
     optimisticUpdateOptions: {
       queryKey: ["todos"],
-      getOptimisticState: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
+      optimisticUpdatesFn: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
         return [...prevQueryData, variables];
       },
       invalidateQueryOnSuccess: true
