@@ -11,6 +11,8 @@ coverage
 
 # build output
 dist/
+cache
+dist
 
 # Dependency directories
 node_modules/
@@ -31,7 +33,8 @@ node_modules/
 .env.production.local
 .env.local
 
-### react ###
+# react 
 .DS_*
 **/*.backup.*
 **/*.back.*
+
