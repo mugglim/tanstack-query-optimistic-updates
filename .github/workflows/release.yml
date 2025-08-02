@@ -40,8 +40,8 @@ jobs:
         with:
           title: "🚀 change package version"
           commit: "📦 bump changed package version"
-          publish: pnpm release
-          version: pnpm changeset-version
+          publish: pnpm changeset:publish
+          version: pnpm changeset:version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
