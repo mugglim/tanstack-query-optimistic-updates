@@ -3,6 +3,7 @@ name: Deploy site to Github Pages
 on:
   push:
     branches: [main]
+    paths: [docs/**]
 
   workflow_dispatch:
 
