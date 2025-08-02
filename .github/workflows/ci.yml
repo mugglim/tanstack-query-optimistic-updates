@@ -7,30 +7,7 @@ on:
   pull_request:
 
 jobs:
-  setup:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-  lint-and-test:
-    needs: setup
+  pre-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -61,8 +38,9 @@ jobs:
 
       - name: Test
         run: pnpm test
+
   build:
-    needs: setup
+    needs: pre-build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
