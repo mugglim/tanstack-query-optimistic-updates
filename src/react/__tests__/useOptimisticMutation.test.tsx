@@ -74,9 +74,16 @@ describe("useOptimisticMutation", () => {
         }
       });
 
+      const onButtonClick = async () => {
+        try {
+          await mutateAsync(newTodo);
+          // eslint-disable-next-line no-empty
+        } catch {}
+      };
+
       return (
         <div>
-          <button onClick={() => mutateAsync(newTodo)}>mutate</button>
+          <button onClick={() => onButtonClick()}>mutate</button>
         </div>
       );
     }

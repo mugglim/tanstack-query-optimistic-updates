@@ -43,10 +43,13 @@
     "clean": "rm -rf dist",
     "build": "pnpm run clean && vite build --config vite.config.mts && pnpm run build:dts",
     "build:dts": "tsup --config tsup.config.mts",
-    "docs:build": "pnpm --filter docs run docs:build"
+    "docs:build": "pnpm --filter docs run docs:build",
+    "release": "changeset publish",
+    "changeset-version": "changeset version"
   },
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
+    "@changesets/cli": "^2.29.5",
     "@eslint/js": "^9.13.0",
     "@testing-library/react": "^16.3.0",
     "@types/react": "^18.2.0",
