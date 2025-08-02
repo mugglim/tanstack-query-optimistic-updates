@@ -1,51 +1,15 @@
-# tanstack-query-optimistic-updates · ![LICENSE](https://img.shields.io/badge/license-MIT-blue)
+# tanstack-query-optimistic-updates · [![LICENSE](https://img.shields.io/badge/license-MIT-blue)](./LICENSE) [![version](https://img.shields.io/npm/v/tanstack-query-optimistic-updates?color=blue&logo=npm)](https://www.npmjs.com/package/tanstack-query-optimistic-updates)
 
-tanstack-query-optimistic-updates is a wrapper around React Query’s useMutation that simplifies optimistic update.
+<a href="https://mugglim.github.io/tanstack-query-optimistic-updates">English</a>
 
-- tanstack-query-optimistic-updates simplifies optimistic updates, including rollback and query invalidation.
-- tanstack-query-optimistic-updates is fully compatible with useMutation.
+A simple way to apply optimistic updates with TanStack Query.
 
-You can learn more about the core concepts from the official TanStack Query's [Optimistic Updates](https://tanstack.com/query/latest/docs/framework/react/guides/optimistic-updates) Guide.
+## Features
 
-## Examples
-
-```tsx
-import { useOptimisticMutation } from "tanstack-query-optimistic-updates";
-
-type Todo = {
-  id: number;
-};
-
-function Page() {
-  const { mutateAsync } = useOptimisticMutation({
-    mutationFn: () => Promise.resolve(),
-    optimisticUpdateOptions: {
-      queryKey: ["todos"],
-      /**
-       * Optimistically updates the query data depending on queryKey.
-       *
-       * Scenarios:
-       * - (1) When mutation begins: [...prevQueryData, variables]
-       * - (2-1) When mutation is failed: [...prevQueryData] (rollback)
-       * - (2-2) When mutation is success: [...prevQueryData, variables]
-       * */
-      optimisticUpdatesFn: ({ prevQueryData, variables }: { prevQueryData: Todo[]; variables: Todo }) => {
-        return [...prevQueryData, variables];
-      },
-      /**
-       * Invalidate query when mutation is success.
-       * */
-      invalidateQueryOnSuccess: true
-    }
-  });
-
-  return (
-    <div>
-      <button onClick={() => mutateAsync(newTodo)}>mutate</button>
-    </div>
-  );
-}
-```
+- **✨ Seamless**: Complete compatibility layer to seamlessly replace useMutation
+- **⚡ Lightweight**: Zero external dependencies for minimal bundle size
+- **📦 Dual Package Support**: Built for both ESM and CJS to optimize tree shaking
+- **🛡️ Type Safety**: Complete typed API with comprehensive type definitions
 
 ## Contributing
 
