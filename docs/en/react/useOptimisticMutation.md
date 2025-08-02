@@ -21,7 +21,7 @@ const {
   mutationFn: addTodo,
   optimisticUpdateOptions: {
     queryKey: ["todos"],
-    optimisticUpdatesFn: ({ prevQueryData, variables }) => {
+    getOptimisticState: ({ prevQueryData, variables }) => {
       return [...prevQueryData, variables];
     },
     invalidateQueryOnSuccess: true
@@ -43,7 +43,7 @@ This parameter extends the original UseMutationOptions. All original options are
     - Defaults to `false`
     - Whether to invalidate the query after a successful mutation
     - If set to `true`, the query will fetch if the data is stale.
-  - `optimisticUpdatesFn: { prevQueryData: TQueryData; variables: TVariables }) => TQueryData;`
+  - `getOptimisticState: { prevQueryData: TQueryData; variables: TVariables }) => TQueryData;`
     - This function returns the state for optimistic updates.
 
 ## queryClient
