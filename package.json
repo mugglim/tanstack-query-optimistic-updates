@@ -47,6 +47,7 @@
   },
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
+    "@changesets/cli": "^2.29.5",
     "@eslint/js": "^9.13.0",
     "@testing-library/react": "^16.3.0",
     "@types/react": "^18.2.0",
