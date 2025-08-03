@@ -2,7 +2,7 @@
 
 A simple way to apply optimistic updates with TanStack Query.
 
-## Visit [tanstack-query-optimistic-updates](https://mugglim.github.io/tanstack-query-optimistic-updates) for docs and guide!
+## Visit [tanstack-query-optimistic-updates](https://mugglim.github.io/tanstack-query-optimistic-updates) for docs and guides!
 
 ## Features
 
