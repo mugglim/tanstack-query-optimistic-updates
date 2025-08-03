@@ -1,8 +1,8 @@
 # tanstack-query-optimistic-updates · [![LICENSE](https://img.shields.io/badge/license-MIT-blue)](./LICENSE) [![version](https://img.shields.io/npm/v/tanstack-query-optimistic-updates?color=blue&logo=npm)](https://www.npmjs.com/package/tanstack-query-optimistic-updates)
 
-<a href="https://mugglim.github.io/tanstack-query-optimistic-updates">English</a>
-
 A simple way to apply optimistic updates with TanStack Query.
+
+## Visit [tanstack-query-optimistic-updates](https://mugglim.github.io/tanstack-query-optimistic-updates) for docs and guides!
 
 ## Features
 
