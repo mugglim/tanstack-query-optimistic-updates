@@ -18,3 +18,5 @@ tanstack-query-optimistic-updates offers a way to simplify and make more consist
 ## Links
 
 - [Github](https://github.com/mugglim/tanstack-query-optimistic-updates)
+
+diff
