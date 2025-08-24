@@ -1,15 +1,10 @@
 # tanstack-query-optimistic-updates · [![LICENSE](https://img.shields.io/badge/license-MIT-blue)](./LICENSE) [![version](https://img.shields.io/npm/v/tanstack-query-optimistic-updates?color=blue&logo=npm)](https://www.npmjs.com/package/tanstack-query-optimistic-updates)
 
-A simple way to apply optimistic updates with TanStack Query.
+`tanstack-query-optimistic-updates` is a simple way to apply optimistic updates with TanStack Query.
 
-## Visit [tanstack-query-optimistic-updates](https://mugglim.github.io/tanstack-query-optimistic-updates) for docs and guides!
+## Getting Started
 
-## Features
-
-- **✨ Seamless**: Complete compatibility layer to seamlessly replace useMutation
-- **⚡ Lightweight**: Zero external dependencies for minimal bundle size
-- **📦 Dual Package Support**: Built for both ESM and CJS to optimize tree shaking
-- **🛡️ Type Safety**: Complete typed API with comprehensive type definitions
+Visit https://mugglim.github.io/tanstack-query-optimistic-updates to get started with tanstack-query-optimistic-updates.
 
 ## Contributing
 

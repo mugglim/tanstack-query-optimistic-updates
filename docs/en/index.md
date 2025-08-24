@@ -9,7 +9,10 @@ hero:
       text: About
       link: /intro.html
     - theme: alt
-      text: GitHub
+      text: Reference
+      link: /react/useOptimisticMutation.html
+    - theme: alt
+      text: Github
       link: https://github.com/mugglim/tanstack-query-optimistic-updates
 
 features:

@@ -5,7 +5,7 @@ const sidebarList: DefaultTheme.SidebarItem[] = [
     text: "Guide",
     items: [
       { text: "Introduction", link: "/intro.html" },
-      { text: "Installation & Usage", link: "/installation.html" }
+      { text: "Getting Started", link: "/getting-started.html" }
     ]
   },
   {
