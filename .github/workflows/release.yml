@@ -2,8 +2,8 @@ name: RELEASE
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+    paths: [src/**]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
